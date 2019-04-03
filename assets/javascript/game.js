@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	//declare variables for computerGuess, win , loss and all four crystals
+	//variables for computerGuess, win , loss and all four crystals
 	var win = 0;
 	var loss = 0;
 	//function that resets the value of crystals, player's score and compGuess
@@ -54,9 +54,9 @@ $(document).ready(function () {
 				win++;
 
 				$("#wins").html(win);
-				$("#status").html("You Matched Brilliant !!");
+				$("#status").html("You Matched Brilliant !! Try Again!!");
 				init();
-				//alert("Start over");
+				alert("You Matched Brilliant !! Try Again!!");
 			} 
 			else if (playerScore > compGuess) {
 				loss++;
@@ -66,7 +66,7 @@ $(document).ready(function () {
 				$("#lose").html(loss);
 				$("#status").html("You've gone OVER!! Try Again!!");
 				init();
-				//alert("You lost");
+				alert("You've gone OVER!! Try Again!!");
 			}
 		}
 	});
