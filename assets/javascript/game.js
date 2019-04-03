@@ -14,25 +14,25 @@ $(document).ready(function () {
 
 		compGuess = Math.floor(Math.random() * 102) + 19;
 		console.log("Computer " + compGuess);
-		$('#computerGuess').html(compGuess);
+		$("#computerGuess").html(compGuess);
 
 		crystalRed = Math.floor(Math.random() * 12) + 1;
-		$('.red').attr('value', crystalRed);
+		$(".red").attr("value", crystalRed);
 		console.log("Red's value is: " + crystalRed);
 
 		crystalGreen = Math.floor(Math.random() * 12) + 1;
-		$('.green').attr('value', crystalGreen);
+		$(".green").attr("value", crystalGreen);
 		console.log("Green's value is: " + crystalGreen);
 
 		crystalBlue = Math.floor(Math.random() * 12) + 1;
-		$('.blue').attr('value', crystalBlue);
+		$(".blue").attr("value", crystalBlue);
 		console.log("Blue's value is: " + crystalBlue);
 
 		crystalYellow = Math.floor(Math.random() * 12) + 1;
-		$('.yellow').attr('value', crystalYellow);
+		$(".yellow").attr("value", crystalYellow);
 		console.log("Yellow's value is: " + crystalYellow);
 
-		$('#displayscore').html(playerScore);
+		$("#displayscore").html(playerScore);
 
 	}
 	init();
@@ -48,25 +48,25 @@ $(document).ready(function () {
 			$("#displayscore").html(playerScore);
 
 			if (playerScore === compGuess) {
-				var audio = document.createElement('audio');
-				audio.setAttribute('src', 'assets/sounds/winsound.mp3');
-				audio.play();
+				// var audio = document.createElement('audio');
+				// audio.setAttribute('src', 'assets/sounds/winsound.mp3');
+				// audio.play();
 				win++;
 
-				$('#wins').html(win);
-				$('#status').html('Good Job make your pick!!');
+				$("#wins").html(win);
+				$("#status").html("You Matched Brilliant !!");
 				init();
-				alert("Start over");
+				//alert("Start over");
 			} 
 			else if (playerScore > compGuess) {
 				loss++;
-				var audio = document.createElement('audio');
-				audio.setAttribute('src', 'assets/sounds/loosesound.mp3');
-				audio.play();
-				$('#lose').html(loss);
-				$('#status').html('Oops!! You loose!!');
+				// var audio = document.createElement('audio');
+				// audio.setAttribute('src', 'assets/sounds/loosesound.mp3');
+				// audio.play();
+				$("#lose").html(loss);
+				$("#status").html("You've gone OVER!! Try Again!!");
 				init();
-				alert("<h1>You lost</h1>");
+				//alert("You lost");
 			}
 		}
 	});
