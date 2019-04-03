@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Crystal Collector</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+</head>
+
+<body>
+  <header>
+    <h1>Crystal Collector</h1>
+  </header>
+  <section class="main">
+    <div id="instructions">
+      <ul>
+        <h2>Game Instructions</h2>
+        <li>You will be given a random number at the start of the game.</li>
+        <li>There will be 4 crystals below</li>
+        <li>Click on a crystal to add to your total score.</li>
+        <li>If your total score matches the random number shown, you win. If not, Hard luck. Try again!!</li>
+      </ul>
+    </div>
+    <div id=gems><!-- Tool tips for buttons "remember to Number given"  -->
+      <button class="red crystal"> <img src="assets/images/RedStone.png" height="70px" width="70px"></button>
+      <button class="green crystal"><img src="assets/images/GreenStone.png" height="70px" width="70px"></button>
+      <button class="blue crystal"><img src="assets/images/BlueStone.png" height="70px" width="70px"></button>
+      <button class="yellow crystal"><img src="assets/images/YellowStone.png" height="70px" width="70px"></button>
+    </div>
+
+
+    <div id="randomNum">
+      <h3>Random number: <span id="computerGuess"></span></h3>
+
+    </div>
+    <div id=score>
+      <div id="status"></div><!--  sttus "doublequotes singlequotes on JS page" -->
+      <div>
+        <h3>Wins: <span id="wins">0</span></h3>
+        <h3>Losses: <span id="lose">0</span></h3>
+        <h3>Total score: <span id="displayscore"></span></h3>
+
+      </div>
+
+
+
+  </section>
+  <script src="assets/javascript/game.js" type="text/javascript"></script>
+</body>
+
+</html>
