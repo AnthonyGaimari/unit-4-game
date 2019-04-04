@@ -54,7 +54,7 @@ $(document).ready(function () {
 				win++;
 
 				$("#wins").html(win);
-				$("#status").html("You Matched Brilliant !! Try Again!!");
+				$("#result").html(playerScore + "  You Matched Brilliant !! Try Again!!");
 				init();
 				alert("You Matched Brilliant !! Try Again!!");
 			} 
@@ -64,7 +64,7 @@ $(document).ready(function () {
 				// audio.setAttribute('src', 'assets/sounds/loosesound.mp3');
 				// audio.play();
 				$("#lose").html(loss);
-				$("#status").html("You've gone OVER!! Try Again!!");
+				$("#result").html("Your score was  OVER!!  " + playerScore +  "  Try Again!!");
 				init();
 				alert("You've gone OVER!! Try Again!!");
 			}
