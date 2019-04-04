@@ -35,8 +35,9 @@ $(document).ready(function () {
 		$("#displayscore").html(playerScore);
 
 	}
-	init();
 
+
+	init();
 	$(".crystal").click(function play() {
 		if ($(this).hasClass("crystal")) {
 			score = parseInt($(this).attr("value"));
