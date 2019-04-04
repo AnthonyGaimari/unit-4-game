@@ -9,6 +9,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+  <script>
+    $( function() {
+      $( document ).tooltip();
+    } );
+    </script>
+    <style>
+    label {
+      display: inline-block;
+      width: 5em;
+    }
+    </style>
+
 </head>
 
 <body>
@@ -26,10 +38,10 @@
       </ul>
     </div>
     <div id=gems><!-- Tool tips for buttons "remember the Number given"  -->
-      <button class="red crystal"> <img src="assets/images/RedStone.png" height="70px" width="70px"></button>
-      <button class="green crystal"><img src="assets/images/GreenStone.png" height="70px" width="70px"></button>
-      <button class="blue crystal"><img src="assets/images/BlueStone.png" height="70px" width="70px"></button>
-      <button class="yellow crystal"><img src="assets/images/YellowStone.png" height="70px" width="70px"></button>
+      <button class="red crystal" title="That&apos;s is a red stone click it. "> <img src="assets/images/RedStone.png" height="70px" width="70px"></button>
+      <button class="green crystal" title="Gemstones will reset per game. "><img src="assets/images/GreenStone.png" height="70px" width="70px"></button>
+      <button class="blue crystal" title="Good now click another. "><img src="assets/images/BlueStone.png" height="70px" width="70px"></button>
+      <button class="yellow crystal" title="Get started click me! "><img src="assets/images/YellowStone.png" height="70px" width="70px"></button>
     </div>
 
 
@@ -38,7 +50,7 @@
 
     </div>
     <div id=score>
-      <div id="result"></div>
+      <div id="result"></div><!--  fade out -->
       <div>
         <h3>Wins: <span id="wins">0</span></h3>
         <h3>Losses: <span id="lose">0</span></h3>

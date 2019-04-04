@@ -38,35 +38,24 @@ $(document).ready(function () {
 	init();
 
 	$(".crystal").click(function play() {
-		//  var audio = document.createElement('audio');
-		//  audio.setAttribute('src', 'assets/sounds/click.mp3');
-		//  audio.play();
-
 		if ($(this).hasClass("crystal")) {
 			score = parseInt($(this).attr("value"));
 			playerScore += score;
 			$("#displayscore").html(playerScore);
 
 			if (playerScore === compGuess) {
-				// var audio = document.createElement('audio');
-				// audio.setAttribute('src', 'assets/sounds/winsound.mp3');
-				// audio.play();
 				win++;
-
 				$("#wins").html(win);
-				$("#result").html(playerScore + "  You Matched Brilliant !! Try Again!!");
-				init();
+				$("#result").html("You Matched Brilliant !! Try Again!!");
 				alert("You Matched Brilliant !! Try Again!!");
-			} 
+				init();
+			}
 			else if (playerScore > compGuess) {
 				loss++;
-				// var audio = document.createElement('audio');
-				// audio.setAttribute('src', 'assets/sounds/loosesound.mp3');
-				// audio.play();
 				$("#lose").html(loss);
-				$("#result").html("Your score was  OVER!!  " + playerScore +  "  Try Again!!");
-				init();
+				$("#result").html("Your score was  OVER!! Try Again!!");
 				alert("You've gone OVER!! Try Again!!");
+				init();
 			}
 		}
 	});
