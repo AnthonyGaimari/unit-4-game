@@ -48,16 +48,14 @@ $(document).ready(function () {
 				win++;
 				$("#wins").html(win);
 				$("#result").html("You Matched Brilliant !! Try Again!!");
-				alert("You Matched Brilliant !! Try Again!!");
-				$("#results").fadeOut(2000);
+				alert("You Matched Brilliant !! Try Again!!");				
 				init();
 			}
 			else if (playerScore > compGuess) {
 				loss++;
 				$("#lose").html(loss);
 				$("#result").html("Your score was  OVER!! Try Again!!");
-				alert("You've gone OVER!! Try Again!!");
-				$("#results").fadeOut(2000);
+				alert("You've gone OVER!! Try Again!!");				
 				init();
 			}
 		}
